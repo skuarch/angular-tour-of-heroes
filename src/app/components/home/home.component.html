@@ -1,0 +1,15 @@
+
+<app-menu></app-menu>
+<br/>
+heroes {{loaderState}}
+<div *ngIf='!dataSharedService.dataSharedIsLoad'>
+  <app-loader [loaderState]='loaderState'></app-loader>
+</div>
+<div *ngIf='dataSharedService.dataSharedIsLoad && heroes.length < 1'>
+  no heroes to show
+</div>
+<div *ngFor="let hero of heroes">
+  <span>
+    {{hero.name}} {{hero.id}}
+  </span>
+</div>

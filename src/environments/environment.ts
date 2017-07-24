@@ -4,5 +4,9 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  envName: 'dev',
+  apiEndPoint:'http://localhost:8080',
+  uriHeroes:'/heroes',
+  webSocketUrl: 'ws://localhost:8080/messages'
 };
